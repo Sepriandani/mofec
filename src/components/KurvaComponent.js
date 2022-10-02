@@ -12,9 +12,22 @@ const options = {
     title: {
       text: 'Kurva IV'
     },
+    xAxis: {
+      categories: [0, 1.87, 3.67, 5.42, 6.51, 8.01, 11.03, 13.2, 14.79, 15.67, 16.3],
+      tickmarkPlacement: 'on',
+      title: {
+          text: 'Tegangan'
+      }
+    },
+    yAxis: {
+      title: {
+          text: 'Arus'
+      }
+    },
     series: [
       {
-        data: [1, 2, 1, 4, 3, 6]
+        name: 'Kurva IV',
+        data: [5.69, 5.69, 5.69, 5.67, 5.67, 5.65, 5.61, 4.79, 3.1, 1.75, 0]
       }
     ]
 };

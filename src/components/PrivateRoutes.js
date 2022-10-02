@@ -4,8 +4,6 @@ import { onAuthStateChanged } from "firebase/auth"
 import { useState } from "react"
 import { auth } from '../firebase-config'
 
-
-
 export default function PrivateRoutes() {
 
     const [user, setUser] = useState({})
