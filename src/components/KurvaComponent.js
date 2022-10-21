@@ -8,8 +8,8 @@ require('highcharts/modules/export-data')(Highcharts);
 export default function KurvaComponent({tegangan, arus, daya}){
 
     const chart = useRef();
-    const [Isc, setIsc] = useState(8);
-    const [Voc, setVoc] = useState(41);
+    const [Isc, setIsc] = useState(9,12);
+    const [Voc, setVoc] = useState(45,9);
 
     // const [dataArus, setDataArus] = useState(8);
     // const [dataDaya, setDataDaya] = useState(330);
