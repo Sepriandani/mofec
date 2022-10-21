@@ -6,11 +6,12 @@ import { useState } from "react";
 
 export default function Kurva(){
 
-    const [ans, setAns] = useState(0);
+    const [data, setData] = useState(0);
+    
     const dbRef = ref(getDatabase(app));
     get(child(dbRef, `Data`)).then((snapshot) => {
         if (snapshot.exists()) {
-          setAns(snapshot.val());
+          setData(snapshot.val());
         } else {
           console.log("No data available");
         }
@@ -18,9 +19,9 @@ export default function Kurva(){
         console.error(error);
     });
 
-    let tegangan = parseFloat(ans.Voltage).toFixed(2);
-    let arus = parseFloat(ans.Current).toFixed(2);
-    let daya = parseFloat(ans.Power).toFixed(2);
+    let tegangan = parseFloat(data.Voltage).toFixed(2);
+    let arus = parseFloat(data.Current).toFixed(2);
+    let daya = parseFloat(data.Power).toFixed(2);
 
     return(
         <>
